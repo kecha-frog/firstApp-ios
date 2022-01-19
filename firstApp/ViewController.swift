@@ -24,6 +24,12 @@ final class ViewController: UIViewController {
         textfieldPass.text = "admin"
     }
     
+    //  Сделал кнопку разлогина
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
+        textfieldLogin.text = ""
+        textfieldPass.text = ""
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -49,6 +55,7 @@ final class ViewController: UIViewController {
         alertController.addAction(closeAction)
         present(alertController, animated: true, completion: nil)
     }
+
     
     @objc private func keyboardWasShown(notification: Notification) {
         let info = notification.userInfo! as NSDictionary

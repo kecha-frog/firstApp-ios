@@ -140,9 +140,16 @@
                             <constraint firstItem="9Py-YQ-XtW" firstAttribute="leading" secondItem="pcb-97-fvd" secondAttribute="leading" id="Bdb-kD-kJZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Groups" id="kNf-Oi-mjz"/>
+                    <navigationItem key="navigationItem" title="Groups" id="kNf-Oi-mjz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="y5E-2X-OL7">
+                            <connections>
+                                <segue destination="BGQ-o9-xB7" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="I07-lC-iAH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Io9-FY-AgO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="BGQ-o9-xB7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3289.8550724637685" y="-130.58035714285714"/>
         </scene>
@@ -219,9 +226,16 @@
                             <constraint firstItem="hx1-JU-B0O" firstAttribute="leading" secondItem="ffW-Gc-PxJ" secondAttribute="leading" id="qtQ-BY-vcH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Friends" id="OoB-ck-5in"/>
+                    <navigationItem key="navigationItem" title="Friends" id="OoB-ck-5in">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="ZRh-Xe-7N0" customClass="v" customModule="firstApp">
+                            <connections>
+                                <segue destination="LOu-VS-FUX" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="Ax6-yq-5wo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HE0-Qj-RbP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="LOu-VS-FUX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3289.8550724637685" y="-786.16071428571422"/>
         </scene>
