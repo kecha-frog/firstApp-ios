@@ -55,7 +55,14 @@ final class ViewController: UIViewController {
         alertController.addAction(closeAction)
         present(alertController, animated: true, completion: nil)
     }
-
+    //Функция проверки логина и пароля
+    private func checkLoginPassword() -> Bool {
+        guard textfieldLogin.text == "admin" && textfieldPass.text == "admin" else{
+            return false
+        }
+        
+        return true
+    }
     
     @objc private func keyboardWasShown(notification: Notification) {
         let info = notification.userInfo! as NSDictionary
@@ -83,11 +90,16 @@ extension ViewController{
             guard textfieldLogin.text != "" && textfieldPass.text != "" else{
                 return false
             }
-            guard textfieldLogin.text == "admin" && textfieldPass.text == "admin" else{
+            
+            let checkResult = checkLoginPassword()
+            
+            // Если данные не верны, покажем ошибку
+            if !checkResult {
                 showAlert(tittle: "Ошибка", message: "Неверный логин или пароль")
-                return false
             }
-            return true
+            
+            // Вернем результат
+            return checkResult
         }
         return false
     }
