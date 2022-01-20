@@ -77,8 +77,12 @@ final class ViewController: UIViewController {
 }
 
 extension ViewController{
+    //Проверка на логин и пароль
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "loginSegue"{
+            guard textfieldLogin.text != "" && textfieldPass.text != "" else{
+                return false
+            }
             guard textfieldLogin.text == "admin" && textfieldPass.text == "admin" else{
                 showAlert(tittle: "Ошибка", message: "Неверный логин или пароль")
                 return false
