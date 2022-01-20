@@ -124,9 +124,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="cq1-Uc-9Ur" kind="show" id="XAZ-iM-nkm"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -146,6 +143,11 @@
                                 <segue destination="BGQ-o9-xB7" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="I07-lC-iAH"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ivN-h5-pn5">
+                            <connections>
+                                <segue destination="cq1-Uc-9Ur" kind="show" id="3EQ-a1-4GD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Io9-FY-AgO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -153,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="3289.8550724637685" y="-130.58035714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--All groups-->
         <scene sceneID="jPb-kZ-WLM">
             <objects>
                 <viewController id="cq1-Uc-9Ur" sceneMemberID="viewController">
@@ -185,11 +187,11 @@
                             <constraint firstItem="p4W-o8-OUg" firstAttribute="trailing" secondItem="1Rt-PC-JwP" secondAttribute="trailing" id="yA7-6i-cJm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hLN-DO-e6V"/>
+                    <navigationItem key="navigationItem" title="All groups" id="hLN-DO-e6V"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVX-fj-zDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4245" y="-125"/>
+            <point key="canvasLocation" x="4245" y="-131"/>
         </scene>
         <!--Friends-->
         <scene sceneID="iHi-D3-Ykk">
