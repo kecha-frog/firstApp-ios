@@ -33,7 +33,7 @@ class FavoriteGroupsViewController: UIViewController {
         tableView.reloadData()
     }
     
-    // Удаление друзей
+    // Удаление группы
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = deleteAction(at: indexPath)
         return UISwipeActionsConfiguration(actions: [delete])
