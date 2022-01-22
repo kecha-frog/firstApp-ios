@@ -8,9 +8,17 @@
 import Foundation
 import UIKit
 
-//Модель друга
+enum friendImageName:String{
+    case aliG
+    case borat
+    case aladin
+    case bigBoss
+    case bruno
+    case herceg
+}
+
 struct FriendModel{
     let name:String
-    let surnameL:String
-    let image:String
+    let surname:String
+    let imageName:friendImageName
 }

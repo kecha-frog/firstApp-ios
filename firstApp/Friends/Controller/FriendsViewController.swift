@@ -1,5 +1,5 @@
 //
-//  FavoriteGroupsViewController.swift
+//  FriendsViewController.swift
 //  firstApp
 //
 //  Created by Ke4a on 22.01.2022.
@@ -7,31 +7,20 @@
 
 import UIKit
 
-class FavoriteGroupsViewController: UIViewController {
+class FriendsViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
-    var dataFavoriteGroup: [GroupModel] = []
-    let storage = GroupsStorage()
-    
+    let storage = FriendsStorage()
+    var dataFriends:[FriendModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataFavoriteGroup = storage.userGroups
+        dataFriends = storage.friends
         
         tableView.delegate = self
         tableView.dataSource = self
     }
     
-    @IBAction func addGroup(unwindSegue: UIStoryboardSegue){
-        guard let sourceController = unwindSegue.source as? AllGroupsViewController,
-            let indexSellectCell = sourceController.tableView.indexPathForSelectedRow
-        else { return }
-        let group = sourceController.dataAllGroups[indexSellectCell.row]
-        if !dataFavoriteGroup.contains(where: { group.name == $0.name }) {
-            dataFavoriteGroup.append(group)
-        }
     
-        tableView.reloadData()
-    }
-    
+    // Удаление друзей
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = deleteAction(at: indexPath)
         return UISwipeActionsConfiguration(actions: [delete])
@@ -40,7 +29,7 @@ class FavoriteGroupsViewController: UIViewController {
     func deleteAction(at indexPath: IndexPath) -> UIContextualAction{
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
             // Удаляем город из массива
-            self.dataFavoriteGroup.remove(at: indexPath.row)
+            self.dataFriends.remove(at: indexPath.row)
             // И удаляем строку из таблицы
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
@@ -50,14 +39,14 @@ class FavoriteGroupsViewController: UIViewController {
     }
 }
 
-extension FavoriteGroupsViewController: UITableViewDelegate, UITableViewDataSource {
+extension FriendsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        dataFavoriteGroup.count
+        dataFriends.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteGroupTableViewCell.identifier) as! FavoriteGroupTableViewCell
-        cell.configure(group: dataFavoriteGroup[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: FriendsTableViewCell.identifier) as! FriendsTableViewCell
+        cell.configure(friend: dataFriends[indexPath.row])
         return cell
     }
 }

@@ -26,8 +26,7 @@ extension AllGroupsViewController: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AllGroupsTableViewCell.identifier) as! AllGroupsTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: GroupsTableViewCell.identifier) as! GroupsTableViewCell
         cell.configure(group:dataAllGroups[indexPath.row])
         return cell
     }
