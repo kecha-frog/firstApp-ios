@@ -87,6 +87,7 @@ extension ViewController{
     //Проверка на логин и пароль
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "loginSegue"{
+            //если пустые поля ввода
             guard textfieldLogin.text != "" && textfieldPass.text != "" else{
                 return false
             }
