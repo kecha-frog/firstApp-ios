@@ -9,12 +9,20 @@ import UIKit
 
 class AllGroupsViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
+    
+    // для данных из прошлого контролера
+    var myGroupPreviousVC: [String] = []
+    
+    
     let storage = GroupsStorage()
     var dataAllGroups: [GroupModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataAllGroups = storage.allGroups
+        // фильтруем чтоб были только уникальные значения
+        dataAllGroups = storage.allGroups.filter { group in
+            !myGroupPreviousVC.contains {$0 == group.name}
+        }
         tableView.delegate = self
         tableView.dataSource = self
     }

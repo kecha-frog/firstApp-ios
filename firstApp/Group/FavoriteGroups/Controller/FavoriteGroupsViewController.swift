@@ -20,16 +20,21 @@ class FavoriteGroupsViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    // передаю данные по сегвею чтоб в списке не было повторения
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "allGroupSegue"{
+            let destinationVC = segue.destination as? AllGroupsViewController
+            destinationVC?.myGroupPreviousVC = dataFavoriteGroup.map { $0.name }
+        }
+    }
+    
     //добавление группы
     @IBAction func addGroup(unwindSegue: UIStoryboardSegue){
         guard let sourceController = unwindSegue.source as? AllGroupsViewController,
             let indexSellectCell = sourceController.tableView.indexPathForSelectedRow
         else { return }
         let group = sourceController.dataAllGroups[indexSellectCell.row]
-        if !dataFavoriteGroup.contains(where: { group.name == $0.name }) {
-            dataFavoriteGroup.append(group)
-        }
-    
+        dataFavoriteGroup.append(group)
         tableView.reloadData()
     }
     

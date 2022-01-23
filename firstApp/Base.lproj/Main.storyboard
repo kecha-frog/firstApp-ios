@@ -124,7 +124,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyZ-eZ-T34">
-                                                    <rect key="frame" x="104" y="41" width="294" height="21"/>
+                                                    <rect key="frame" x="104" y="41" width="290" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -141,9 +141,9 @@
                                                 <constraint firstItem="VyZ-eZ-T34" firstAttribute="centerY" secondItem="YZZ-ZJ-Rb2" secondAttribute="centerY" id="C3w-O3-MDR"/>
                                                 <constraint firstItem="YZZ-ZJ-Rb2" firstAttribute="top" secondItem="OOF-iR-kK6" secondAttribute="topMargin" id="ECw-zd-Mwy"/>
                                                 <constraint firstItem="YZZ-ZJ-Rb2" firstAttribute="leading" secondItem="OOF-iR-kK6" secondAttribute="leading" constant="16" id="Nd6-Qz-sf0"/>
-                                                <constraint firstItem="VyZ-eZ-T34" firstAttribute="leading" secondItem="YZZ-ZJ-Rb2" secondAttribute="trailing" constant="8" id="R4a-Gh-Oj9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VyZ-eZ-T34" secondAttribute="trailing" id="XOZ-EF-AWb"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="YZZ-ZJ-Rb2" secondAttribute="bottom" id="cr8-qg-bOR"/>
-                                                <constraint firstAttribute="trailing" secondItem="VyZ-eZ-T34" secondAttribute="trailing" constant="16" id="twr-fs-mIZ"/>
+                                                <constraint firstItem="VyZ-eZ-T34" firstAttribute="leading" secondItem="YZZ-ZJ-Rb2" secondAttribute="trailing" constant="8" id="ua8-Gd-Kh1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -167,7 +167,7 @@
                     <navigationItem key="navigationItem" title="Groups" id="kNf-Oi-mjz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ivN-h5-pn5">
                             <connections>
-                                <segue destination="cq1-Uc-9Ur" kind="show" id="3EQ-a1-4GD"/>
+                                <segue destination="cq1-Uc-9Ur" kind="show" identifier="allGroupSegue" id="3EQ-a1-4GD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -223,7 +223,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4R-u3-V0l">
-                                                    <rect key="frame" x="104" y="41" width="294" height="21"/>
+                                                    <rect key="frame" x="104" y="41" width="290" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -231,11 +231,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="lY4-AJ-r8g" firstAttribute="leading" secondItem="Sul-TI-hio" secondAttribute="leading" constant="16" id="4g3-qC-8B5"/>
+                                                <constraint firstItem="J4R-u3-V0l" firstAttribute="leading" secondItem="lY4-AJ-r8g" secondAttribute="trailing" constant="8" id="B3v-7s-rJh"/>
                                                 <constraint firstItem="J4R-u3-V0l" firstAttribute="centerY" secondItem="lY4-AJ-r8g" secondAttribute="centerY" id="Hym-yv-Lcj"/>
                                                 <constraint firstItem="lY4-AJ-r8g" firstAttribute="top" secondItem="Sul-TI-hio" secondAttribute="topMargin" id="SbH-M7-hOK"/>
-                                                <constraint firstAttribute="trailing" secondItem="J4R-u3-V0l" secondAttribute="trailing" constant="16" id="Y8r-wM-REM"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="lY4-AJ-r8g" secondAttribute="bottom" id="dcf-ej-ChB"/>
-                                                <constraint firstItem="J4R-u3-V0l" firstAttribute="leading" secondItem="lY4-AJ-r8g" secondAttribute="trailing" constant="8" id="kMR-WI-N69"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="J4R-u3-V0l" secondAttribute="trailing" id="scC-FZ-JvT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
