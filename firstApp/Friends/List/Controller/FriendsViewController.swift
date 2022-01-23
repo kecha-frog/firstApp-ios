@@ -35,6 +35,19 @@ class FriendsViewController: UIViewController {
         action.image = UIImage(systemName: "trash.fill")
         return action
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "friendCollectionSegue"{
+            guard let sourceController = segue.source as? FriendsViewController,
+                let indexSellectCell = sourceController.tableView.indexPathForSelectedRow
+            else { return }
+            
+            let destinationVC = segue.destination as! FriendsCollectionViewController
+            let friend = dataFriends[indexSellectCell.row]
+            destinationVC.title = friend.name
+            destinationVC.dataUserImage = friend.imageUser
+        }
+    }
 }
 
 extension FriendsViewController: UITableViewDelegate, UITableViewDataSource{

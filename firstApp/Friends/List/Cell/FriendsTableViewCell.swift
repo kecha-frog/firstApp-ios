@@ -16,6 +16,6 @@ class FriendsTableViewCell: UITableViewCell {
     func configure(friend: FriendModel){
         nameFriendsOutlet.text = "\(friend.name) \(friend.surname)"
         imageFriendsOutlet.layer.cornerRadius = bounds.height / 2
-        imageFriendsOutlet.image = UIImage(named: friend.imageName.rawValue)
+        imageFriendsOutlet.image = UIImage(named: friend.imageUser.last!.name)
     }
 }

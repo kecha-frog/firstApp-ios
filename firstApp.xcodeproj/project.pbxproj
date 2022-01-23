@@ -22,6 +22,8 @@
 		F26143BF279C43C4006AAF0D /* FavoriteGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26143BE279C43C4006AAF0D /* FavoriteGroupsViewController.swift */; };
 		F26143C4279C4B06006AAF0D /* AllGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26143C3279C4B06006AAF0D /* AllGroupsViewController.swift */; };
 		F26143C6279C4B20006AAF0D /* GroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26143C5279C4B20006AAF0D /* GroupsTableViewCell.swift */; };
+		F2871A45279D9DC700604AEE /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2871A44279D9DC700604AEE /* FriendsCollectionViewCell.swift */; };
+		F2871A47279D9DEF00604AEE /* FriendsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2871A46279D9DEF00604AEE /* FriendsCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		F26143BE279C43C4006AAF0D /* FavoriteGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGroupsViewController.swift; sourceTree = "<group>"; };
 		F26143C3279C4B06006AAF0D /* AllGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsViewController.swift; sourceTree = "<group>"; };
 		F26143C5279C4B20006AAF0D /* GroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewCell.swift; sourceTree = "<group>"; };
+		F2871A44279D9DC700604AEE /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F2871A46279D9DEF00604AEE /* FriendsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,7 @@
 		F22B1F5B279C57990098B11F /* Group */ = {
 			isa = PBXGroup;
 			children = (
-				F26143C1279C4AEC006AAF0D /* СommonCell */,
-				F26143B0279C3C05006AAF0D /* FavoriteGroups */,
-				F26143C0279C4ACF006AAF0D /* AllGroups */,
+				F2871A3F279D9D6100604AEE /* List */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -102,8 +104,8 @@
 		F24D4CE92799914E006D4D57 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				F24D4CEC27999165006D4D57 /* Controller */,
-				F24D4CEB2799915E006D4D57 /* Cell */,
+				F2871A41279D9D8A00604AEE /* Collection */,
+				F2871A40279D9D7A00604AEE /* List */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -178,6 +180,50 @@
 			isa = PBXGroup;
 			children = (
 				F26143C3279C4B06006AAF0D /* AllGroupsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F2871A3F279D9D6100604AEE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F26143C1279C4AEC006AAF0D /* СommonCell */,
+				F26143B0279C3C05006AAF0D /* FavoriteGroups */,
+				F26143C0279C4ACF006AAF0D /* AllGroups */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		F2871A40279D9D7A00604AEE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F24D4CEC27999165006D4D57 /* Controller */,
+				F24D4CEB2799915E006D4D57 /* Cell */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		F2871A41279D9D8A00604AEE /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				F2871A43279D9DAD00604AEE /* Controller */,
+				F2871A42279D9DA200604AEE /* Cell */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		F2871A42279D9DA200604AEE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F2871A44279D9DC700604AEE /* FriendsCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F2871A43279D9DAD00604AEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2871A46279D9DEF00604AEE /* FriendsCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,10 +307,12 @@
 				F26143C4279C4B06006AAF0D /* AllGroupsViewController.swift in Sources */,
 				F22B1F61279C5E3B0098B11F /* FriendsViewController.swift in Sources */,
 				F26143BF279C43C4006AAF0D /* FavoriteGroupsViewController.swift in Sources */,
+				F2871A47279D9DEF00604AEE /* FriendsCollectionViewController.swift in Sources */,
 				F2481D9427845BAE0063BA37 /* AppDelegate.swift in Sources */,
 				F2481D9627845BAE0063BA37 /* SceneDelegate.swift in Sources */,
 				F26143B9279C3D05006AAF0D /* GroupsStorage.swift in Sources */,
 				F22B1F63279C5FB50098B11F /* FriendsStorage.swift in Sources */,
+				F2871A45279D9DC700604AEE /* FriendsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

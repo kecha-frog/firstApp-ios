@@ -8,17 +8,15 @@
 import Foundation
 import UIKit
 
-enum friendImageName:String{
-    case aliG
-    case borat
-    case aladin
-    case bigBoss
-    case bruno
-    case herceg
+
+
+struct ImageModel{
+    let name:String
+    var like: Int
 }
 
 struct FriendModel{
     let name:String
     let surname:String
-    let imageName:friendImageName
+    let imageUser: [ImageModel]
 }
