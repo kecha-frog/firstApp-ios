@@ -14,7 +14,7 @@ class FriendsStorage{
         friends = [
             FriendModel(name: "Borat", surname: "Sagdiyev", imageName: .borat),
             FriendModel(name: "Ali", surname: "G", imageName: .aliG),
-            FriendModel(name: "Aladdin", surname: "Sagdiyev", imageName: .aladin),
+            FriendModel(name: "Aladdin", surname: "Dictator", imageName: .aladin),
             FriendModel(name: "Big", surname: "Boss", imageName: .bigBoss),
             FriendModel(name: "Bruno", surname: "Gehard", imageName: .bruno),
             FriendModel(name: "Herceg", surname: "Five", imageName: .herceg),
