@@ -28,9 +28,7 @@ class FriendsViewController: UIViewController {
     
     func deleteAction(at indexPath: IndexPath) -> UIContextualAction{
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
-            // Удаляем город из массива
             self.dataFriends.remove(at: indexPath.row)
-            // И удаляем строку из таблицы
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
         action.backgroundColor = #colorLiteral(red: 1, green: 0.3464992942, blue: 0.4803417176, alpha: 1)
