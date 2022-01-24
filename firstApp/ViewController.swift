@@ -23,13 +23,7 @@ final class ViewController: UIViewController {
         textfieldLogin.text = "admin"
         textfieldPass.text = "admin"
     }
-    
-    //  Сделал кнопку разлогина
-    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
-        textfieldLogin.text = ""
-        textfieldPass.text = ""
-    }
-    
+  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -87,6 +81,7 @@ extension ViewController{
     //Проверка на логин и пароль
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "loginSegue"{
+            //если пустые поля ввода
             guard textfieldLogin.text != "" && textfieldPass.text != "" else{
                 return false
             }
