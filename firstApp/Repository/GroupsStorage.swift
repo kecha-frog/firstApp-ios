@@ -13,23 +13,23 @@ class GroupsStorage {
     
     init(){
         userGroups = [
-            GroupModel(name: "Rock music", imageName: CategoryGroup.music.rawValue, category: .music),
-            GroupModel(name: "Nature", imageName: CategoryGroup.nature.rawValue, category: .nature),
-            GroupModel(name: "Любители Звездных войн", imageName: CategoryGroup.film.rawValue, category: .film),
+            GroupModel(name: "Rock music", category: .music),
+            GroupModel(name: "Nature", category: .nature),
+            GroupModel(name: "Любители Звездных войн", category: .film),
         ]
         
         allGroups = [
-            GroupModel(name: "Classic film", imageName: CategoryGroup.film.rawValue, category: .film),
-            GroupModel(name: "Classic music", imageName: CategoryGroup.music.rawValue, category: .film),
-            GroupModel(name: "Western", imageName: CategoryGroup.film.rawValue, category: .film),
-            GroupModel(name: "Punk", imageName: CategoryGroup.music.rawValue, category: .film),
-            GroupModel(name: "For children film", imageName: CategoryGroup.film.rawValue, category: .film),
-            GroupModel(name: "40 kg", imageName: CategoryGroup.other.rawValue, category: .other),
-            GroupModel(name: "Nature", imageName: CategoryGroup.nature.rawValue, category: .nature),
-            GroupModel(name: "Metal", imageName: CategoryGroup.music.rawValue, category: .music),
-            GroupModel(name: "Story life", imageName: CategoryGroup.nature.rawValue, category: .nature),
-            GroupModel(name: "Любители Звездных войн", imageName: CategoryGroup.film.rawValue, category: .film),
-            GroupModel(name: "Other films", imageName: CategoryGroup.film.rawValue, category: .film)
+            GroupModel(name: "Classic film", category: .film),
+            GroupModel(name: "Classic music", category: .film),
+            GroupModel(name: "Western", category: .film),
+            GroupModel(name: "Punk", category: .film),
+            GroupModel(name: "For children film", category: .film),
+            GroupModel(name: "40 kg", category: .other),
+            GroupModel(name: "Nature", category: .nature),
+            GroupModel(name: "Metal", category: .music),
+            GroupModel(name: "Story life", category: .nature),
+            GroupModel(name: "Любители Звездных войн", category: .film),
+            GroupModel(name: "Other films", category: .film)
         ]
     }
 }
