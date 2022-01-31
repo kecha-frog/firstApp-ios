@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F21EB5B227A8269E003698CD /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21EB5B127A8269E003698CD /* AvatarView.swift */; };
 		F22B1F5D279C5E020098B11F /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1F5C279C5E020098B11F /* FriendsTableViewCell.swift */; };
 		F22B1F61279C5E3B0098B11F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1F60279C5E3B0098B11F /* FriendsViewController.swift */; };
 		F22B1F63279C5FB50098B11F /* FriendsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1F62279C5FB50098B11F /* FriendsStorage.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F21EB5B127A8269E003698CD /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		F22B1F5C279C5E020098B11F /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		F22B1F60279C5E3B0098B11F /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		F22B1F62279C5FB50098B11F /* FriendsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsStorage.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F21EB5B027A82668003698CD /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F21EB5B127A8269E003698CD /* AvatarView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		F22B1F5B279C57990098B11F /* Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +207,7 @@
 		F2871A40279D9D7A00604AEE /* List */ = {
 			isa = PBXGroup;
 			children = (
+				F21EB5B027A82668003698CD /* CustomView */,
 				F24D4CEC27999165006D4D57 /* Controller */,
 				F24D4CEB2799915E006D4D57 /* Cell */,
 			);
@@ -312,6 +323,7 @@
 				F2481D9627845BAE0063BA37 /* SceneDelegate.swift in Sources */,
 				F26143B9279C3D05006AAF0D /* GroupsStorage.swift in Sources */,
 				F22B1F63279C5FB50098B11F /* FriendsStorage.swift in Sources */,
+				F21EB5B227A8269E003698CD /* AvatarView.swift in Sources */,
 				F2871A45279D9DC700604AEE /* FriendsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
