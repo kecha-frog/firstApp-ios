@@ -30,3 +30,13 @@ extension FriendsCollectionViewController: UICollectionViewDelegate, UICollectio
         return cell
     }
 }
+
+//extension FriendsCollectionViewController:FriendsCollectionViewCellDelegate{
+//    func likeAction(_ sender: Bool) {
+//        if sender{
+//            
+//        }
+//    }
+//    
+//    
+//}
