@@ -7,23 +7,43 @@
 
 import UIKit
 
-class AvatarView: UIView {
+// MARK: 1
+@IBDesignable class AvatarView: UIView {
+    // MARK: 2
+    @IBInspectable var radius: CGFloat = 3 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var color: UIColor = UIColor.gray {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var Opacity: Float = 0.5 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
     var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.layer.borderWidth = 1
         self.layer.borderColor = #colorLiteral(red: 0.2624342442, green: 0.4746298194, blue: 0.7327683568, alpha: 1)
         
-        self.layer.shadowColor = UIColor.gray.cgColor
+        self.layer.shadowColor = color.cgColor
         self.layer.shadowOffset = CGSize(width: 3, height: 3)
-        self.layer.shadowRadius = 3
-        self.layer.shadowOpacity = 0.5
+        self.layer.shadowRadius = radius
+        self.layer.shadowOpacity = Opacity
         
         
         imageView.clipsToBounds = true
