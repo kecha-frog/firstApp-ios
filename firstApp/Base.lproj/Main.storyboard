@@ -23,7 +23,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efA-sA-Y16" userLabel="ContainerView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="459"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VK_Monochrome_Full_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="oTg-u7-mo2">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vkLogo" translatesAutoresizingMaskIntoConstraints="NO" id="oTg-u7-mo2">
                                                 <rect key="frame" x="68.5" y="200" width="277" height="48"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
@@ -46,7 +46,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Войти">
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <color key="baseForegroundColor" red="0.23620688919999999" green="0.43179625269999999" blue="0.66541808840000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <color key="baseBackgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="9iW-pw-Ho0" kind="show" identifier="loginSegue" id="V71-97-MvI"/>
@@ -68,7 +68,6 @@
                                             <constraint firstItem="7VE-BF-5hI" firstAttribute="leading" secondItem="efA-sA-Y16" secondAttribute="leading" constant="10" id="Ue4-r9-6vq"/>
                                             <constraint firstAttribute="trailing" secondItem="7VE-BF-5hI" secondAttribute="trailing" constant="10" id="UjP-4H-jkw"/>
                                             <constraint firstItem="fU3-VR-ONR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7VE-BF-5hI" secondAttribute="leading" id="f8M-BO-4YC"/>
-                                            <constraint firstItem="oTg-u7-mo2" firstAttribute="centerX" secondItem="efA-sA-Y16" secondAttribute="centerX" id="gUN-ec-LWq"/>
                                             <constraint firstItem="oTg-u7-mo2" firstAttribute="top" secondItem="efA-sA-Y16" secondAttribute="top" constant="200" id="k6u-Y0-ecp"/>
                                             <constraint firstItem="fU3-VR-ONR" firstAttribute="top" secondItem="7VE-BF-5hI" secondAttribute="bottom" constant="1" id="kf8-z6-d9o"/>
                                             <constraint firstItem="fU3-VR-ONR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7VE-BF-5hI" secondAttribute="trailing" id="oRI-9x-x84"/>
@@ -103,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="509" y="-453"/>
+            <point key="canvasLocation" x="508.69565217391306" y="-453.34821428571428"/>
         </scene>
         <!--Groups-->
         <scene sceneID="RXn-oR-58E">
@@ -459,16 +458,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="VK_Monochrome_Full_Logo" width="277" height="48"/>
         <image name="crown" catalog="system" width="128" height="92"/>
         <image name="crown.fill" catalog="system" width="128" height="92"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.3.sequence" catalog="system" width="128" height="59"/>
+        <image name="vkLogo" width="277" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

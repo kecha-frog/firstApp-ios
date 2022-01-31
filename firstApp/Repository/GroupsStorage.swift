@@ -19,6 +19,7 @@ class GroupsStorage {
         ]
         
         allGroups = [
+            GroupModel(name: "Rock music", category: .music),
             GroupModel(name: "Classic film", category: .film),
             GroupModel(name: "Classic music", category: .film),
             GroupModel(name: "Western", category: .film),
