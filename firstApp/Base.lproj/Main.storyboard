@@ -368,7 +368,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGb-WE-5mj" customClass="LikePhoto" customModule="firstApp" customModuleProvider="target">
-                                                    <rect key="frame" x="122" y="122" width="30" height="30"/>
+                                                    <rect key="frame" x="114" y="114" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="4u9-Nd-TZ3"/>
                                                         <constraint firstAttribute="width" constant="30" id="72g-kC-Mof"/>
@@ -376,12 +376,12 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="CGb-WE-5mj" secondAttribute="trailing" constant="8" id="URl-9O-FIq"/>
+                                                <constraint firstAttribute="trailing" secondItem="CGb-WE-5mj" secondAttribute="trailing" constant="16" id="URl-9O-FIq"/>
                                                 <constraint firstItem="qj6-rk-zzg" firstAttribute="leading" secondItem="mCB-Ng-CMu" secondAttribute="leading" id="Uxy-gZ-7aG"/>
                                                 <constraint firstItem="qj6-rk-zzg" firstAttribute="top" secondItem="mCB-Ng-CMu" secondAttribute="top" id="Xbq-bi-Dpv"/>
                                                 <constraint firstAttribute="trailing" secondItem="qj6-rk-zzg" secondAttribute="trailing" id="ag8-E3-iQ6"/>
                                                 <constraint firstAttribute="bottom" secondItem="qj6-rk-zzg" secondAttribute="bottom" id="grb-px-rFh"/>
-                                                <constraint firstAttribute="bottom" secondItem="CGb-WE-5mj" secondAttribute="bottom" constant="8" id="wlr-gU-g9I"/>
+                                                <constraint firstAttribute="bottom" secondItem="CGb-WE-5mj" secondAttribute="bottom" constant="16" id="wlr-gU-g9I"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>

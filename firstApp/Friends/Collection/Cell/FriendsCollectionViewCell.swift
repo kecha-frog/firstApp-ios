@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol FriendsCollectionViewCellDelegate{
-    func likeAction(_sender: Bool)
-}
-
 class FriendsCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imageOutlet: UIImageView!
     @IBOutlet var likePhotoView: LikePhoto!
@@ -23,17 +19,19 @@ class FriendsCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    var delegate: FriendsCollectionViewCellDelegate?
+    
     
     func configure(_ image:ImageModel){
         imageOutlet.image = UIImage(named: image.name)
-        likePhotoView.configure(image.like)
-        likePhotoView.addTarget(self, action: #selector(likePhotoAction(_:)), for: .valueChanged)
+        likePhotoView.configure(image.like, youLike: image.youLike)
+        //likePhotoView.addTarget(self, action: #selector(likePhotoAction(_:)), for: .valueChanged)
     }
 
-    @objc func likePhotoAction(_ sender:LikePhoto){
-        print(sender)
-        self.delegate?.likeAction(_sender: likePhotoView.like)
-    }
+//    @objc func likePhotoAction(_ sender:LikePhoto){
+//        guard let like = likePhotoView.youLike else {
+//            return
+//        }
+//        print(like)
+//    }
 }
 

@@ -8,9 +8,16 @@
 import UIKit
 
 class LikePhoto: UIControl {
-    var like = false {
-        didSet {
-            self.sendActions(for: .valueChanged)
+//    var youLike: Bool? {
+//        didSet {
+//            self.sendActions(for: .valueChanged)
+//        }
+//    }
+    
+    var youLike: Bool?
+    var likeCount: Int = 0{
+        didSet{
+            label.text = String(likeCount)
         }
     }
     
@@ -18,7 +25,6 @@ class LikePhoto: UIControl {
         let button = UIButton()
         let image = UIImage(named: "like")
         button.setImage(image, for: .normal)
-        button.tintColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         return button
     }()
     
@@ -52,16 +58,20 @@ class LikePhoto: UIControl {
         button.addTarget(self, action: #selector(likeAction), for: .touchUpInside)
     }
     
-    func configure(_ likeCount: Int){
-        label.text = String(likeCount)
+    func configure(_ likeCount: Int, youLike:Bool){
+        self.likeCount = likeCount
+        self.youLike = youLike
+        button.tintColor = youLike ? .red : #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
     }
     
     @objc func likeAction(){
-        like = !like
-        if !like {
+        self.youLike = !youLike!
+        if !youLike! {
             button.tintColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        }else if like{
-            button.tintColor = #colorLiteral(red: 1, green: 0.3464992942, blue: 0.4803417176, alpha: 1)
+            likeCount -= 1
+        }else if youLike!{
+            button.tintColor = .red
+            likeCount += 1
         }
     }
 }
