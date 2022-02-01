@@ -15,7 +15,6 @@ class FriendsTableViewCell: UITableViewCell {
 
     
     func configure(friend: FriendModel){
-        
         nameFriendsOutlet.text = "\(friend.name) \(friend.surname)"
         avatarView.setImage(friend.avatar.name)
         self.layoutIfNeeded()
