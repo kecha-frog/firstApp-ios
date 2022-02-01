@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// MARK: 3
 class LikePhoto: UIControl {
 //    var youLike: Bool? {
 //        didSet {
