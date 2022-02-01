@@ -21,11 +21,12 @@ class LikePhoto: UIControl {
         }
     }
     
-    var button: UIButton = {
-        let button = UIButton()
+    var imageView: UIImageView = {
+        let imageView = UIImageView()
         let image = UIImage(named: "like")
-        button.setImage(image, for: .normal)
-        return button
+        imageView.image = image
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     var label: UILabel = {
@@ -38,7 +39,7 @@ class LikePhoto: UIControl {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        button.frame = bounds
+        imageView.frame = bounds
         label.frame = bounds
     }
     
@@ -53,24 +54,26 @@ class LikePhoto: UIControl {
     }
     
     func setupUI(){
-        self.addSubview(button)
+        self.addSubview(imageView)
         self.addSubview(label)
-        button.addTarget(self, action: #selector(likeAction), for: .touchUpInside)
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(likeAction))
+        addGestureRecognizer(tapGestureRecognizer)
     }
     
     func configure(_ likeCount: Int, youLike:Bool){
         self.likeCount = likeCount
         self.youLike = youLike
-        button.tintColor = youLike ? .red : #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        imageView.tintColor = youLike ? .red : #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
     }
     
     @objc func likeAction(){
         self.youLike = !youLike!
         if !youLike! {
-            button.tintColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            imageView.tintColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             likeCount -= 1
         }else if youLike!{
-            button.tintColor = .red
+            imageView.tintColor = .red
             likeCount += 1
         }
     }
