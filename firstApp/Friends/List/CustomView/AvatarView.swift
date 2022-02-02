@@ -22,7 +22,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var Opacity: Float = 0.5 {
+    @IBInspectable var opacity: CGFloat = 0.5 {
         didSet{
             setNeedsDisplay()
         }
@@ -43,7 +43,7 @@ import UIKit
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOffset = CGSize(width: 3, height: 3)
         self.layer.shadowRadius = radius
-        self.layer.shadowOpacity = Opacity
+        self.layer.shadowOpacity = Float(opacity)
         
         
         imageView.clipsToBounds = true
