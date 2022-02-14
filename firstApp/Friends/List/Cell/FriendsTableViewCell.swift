@@ -8,14 +8,15 @@
 import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
-    @IBOutlet var imageFriendsOutlet: UIImageView!
+    @IBOutlet var avatarView: AvatarView!
     @IBOutlet var nameFriendsOutlet: UILabel!
     
     static var identifier = "FriendsTableViewCell"
+
     
     func configure(friend: FriendModel){
         nameFriendsOutlet.text = "\(friend.name) \(friend.surname)"
-        imageFriendsOutlet.layer.cornerRadius = bounds.height / 2
-        imageFriendsOutlet.image = UIImage(named: friend.imageUser.last!.name)
+        avatarView.setImage(friend.avatar.name)
+        self.layoutIfNeeded()
     }
 }

@@ -6,17 +6,21 @@
 //
 
 import Foundation
-import UIKit
-
-
 
 struct ImageModel{
     let name:String
     var like: Int
+    var youLike: Bool
 }
 
 struct FriendModel{
     let name:String
     let surname:String
     let imageUser: [ImageModel]
+    let avatar: ImageModel
+    var title:String{
+          get {
+            return "\(name) \(surname)"
+          }
+    }
 }
